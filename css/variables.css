@@ -1,0 +1,9 @@
+/* Color palette and design tokens */
+:root {
+    --primary: #0F0326;
+    --secondary: #E65F5C;
+    --accent: #FFFF82;
+    --bg-light: #F5F7DC;
+    --card-light: #ffffff;
+    --card-soft: #B5D99C;
+}

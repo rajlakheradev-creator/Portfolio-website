@@ -1,0 +1,119 @@
+/* ============================================================
+   RESPONSIVE DESIGN - CORRECTED ANIMATION LOGIC
+   ============================================================ */
+
+/* TABLET AND PC (min-width: 969px) 
+   Ensures 3D animations and PC layouts are preserved */
+@media screen and (min-width: 969px) {
+    #skills .ring {
+        display: block;
+        animation: spin 20s linear infinite;
+        transform-style: preserve-3d;
+    }
+    
+    /* Project Carousel for PC: Show 3 cards (Logic handled by JS) */
+    section#Projects ul li {
+        flex: 0 0 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+/* TABLET & LARGE MOBILE (max-width: 968px) */
+@media screen and (max-width: 968px) {
+    .hamburger { display: flex; }
+    
+    nav#navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; left: 0;
+        background-color: var(--primary);
+        padding: 20px 0;
+    }
+
+    nav#navbar ul.active { display: flex; }
+
+    /* Skills: Begin transitioning to static if screen is small */
+    #skills .carousel23 { transform: scale(0.7); }
+    
+    /* Project Carousel for Tablet: Show 2 cards */
+    section#Projects ul li {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+
+/* MOBILE PHONES (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* --- SKILLS: STACKED & STATIC --- */
+    section#skills { padding: 40px 15px; height: auto; min-height: auto; }
+    
+    #skills .carousel23 {
+        perspective: none;
+        transform: none;
+        max-width: 100%;
+    }
+
+    #skills .ring {
+        animation: none !important; /* Stop spinning for mobile usability */
+        transform-style: flat !important;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    #skills .headings {
+        position: relative !important; /* Stack them vertically */
+        transform: none !important; /* Remove 3D rotation */
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        opacity: 1 !important;
+        left: auto; top: auto;
+    }
+
+    /* --- CERTIFICATES: SMALLER/FASTER TREADMILL --- */
+    .cert-card {
+        min-width: 250px; /* Smaller cards for mobile */
+        max-width: 250px;
+    }
+
+    .cert-track {
+        animation: treadmill 15s linear infinite; /* Faster speed (15s vs PC 40s) */
+        gap: 15px;
+    }
+
+    /* Recalculate treadmill for smaller cards */
+    @keyframes treadmill {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); } 
+    }
+
+    /* --- PROJECTS: SINGLE CARD --- */
+    .carousel-wrapper { padding: 0 40px; }
+    
+    section#Projects ul li {
+        flex: 0 0 100% !important; /* Force single card */
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+    
+    .carousel-btn { width: 35px; height: 35px; }
+}
+
+/* SMALL MOBILE (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    header#main-header h1 { font-size: 22px; }
+    .hero-text h1 { font-size: 24px; }
+    
+    .profile-card { max-width: 240px; }
+    .profile-card img { width: 120px; height: 120px; }
+    
+    /* Even faster treadmill for tiny screens to keep movement visible */
+    .cert-track { animation-duration: 10s; }
+}

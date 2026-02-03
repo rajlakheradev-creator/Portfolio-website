@@ -1,0 +1,21 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
+}
+
+body {
+    background-color: var(--bg-light); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px; 
+    line-height: 1.6em;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}

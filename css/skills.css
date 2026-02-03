@@ -1,0 +1,160 @@
+/* Skills 3D Carousel */
+section#skills {
+    background: linear-gradient(135deg,#E65F5C,#31146a);
+    color: var(--bg-light);
+    min-height:600px;
+    padding: 80px 0;
+    text-align: center;
+    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    place-items: center;
+}
+#skills .carousel23{
+perspective: 1200px;
+width: 100%;
+    max-width: 500px;
+    margin: 0 auto 60px;
+}
+
+#skills h2 {
+   font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
+}
+
+#skills .ring {
+    position: relative;
+    list-style: none;
+    animation: spin 20s linear infinite;
+    transform-style: preserve-3d;
+     width: 440px;
+     height: 300px;
+     padding: 0;
+     margin: 0 auto;
+}
+
+#skills .ring:hover,
+#skills .ring:active,
+#skills .ring:focus-within {
+    animation-play-state: paused;
+}
+
+ #skills .headings {
+    position: absolute;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    place-items: center;
+   width: 350px;
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+    justify-content: flex-start;
+   background-color: var(--card-light);
+   color: var(--primary);
+   text-align: left;
+   border: 1px solid var(--primary);
+    border-radius: 16px; 
+box-shadow: 0 0 15px rgba(0,0,0,0.2); /* Adds a glow that helps "fill" the visual space */    transform-style: preserve-3d;
+    
+}
+
+#skills .headings > strong{
+    color: var(--secondary);
+ display: block;
+ margin-bottom: 12px;
+ font-size: 16px;
+ letter-spacing: 1px;
+     text-transform: uppercase;
+
+}
+.headings:nth-child(1){
+    transform: rotateY(0deg)  translateZ(240px);
+}
+.headings:nth-child(2){
+    transform: rotateY(72deg) translateZ(240px);
+}
+.headings:nth-child(3){
+    transform: rotateY(144deg) translateZ(240px);
+}
+.headings:nth-child(4){
+    transform: rotateY(216deg) translateZ(240px);
+}
+.headings:nth-child(5){
+    transform: rotateY(288deg) translateZ(240px) ;
+}
+
+#skills .headings:hover,
+#skills .headings:active {
+    cursor: pointer;
+    /* This ensures the user knows it's interactive */
+}
+
+ #skills.panel{
+    list-style: none;
+    margin: 0;
+    padding:0;
+   
+}
+
+#skills .panel li{
+
+    background-color:transparent;
+    margin-bottom: 4px;
+        padding: 4px 0;
+
+    line-height: 1.4;
+    font-size: 12px;
+    color: var(--primary);
+    border-bottom:1px solid rgba(15,3,38,0.1);
+}
+
+@keyframes spin{
+    from{ transform: rotateY(0deg);} to {transform: rotateY(360deg);}
+}
+.Additional {
+    background: rgba(255,255,255,0.15);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 15px 30px;
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 80px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.Additional h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.Additional .last {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.Additional .last li {
+    background: rgba(255,255,255,0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.Additional .last li:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateX(5px);
+}

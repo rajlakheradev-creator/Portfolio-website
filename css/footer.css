@@ -1,0 +1,14 @@
+/* Footer Styles */
+footer#main-footer {
+    background-color: var(--primary);
+    color: var(--accent);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    border-top: 3px solid var(--secondary);
+    margin-top: 50px;
+}
+
+footer#main-footer p {
+    margin: 5px 0;
+}

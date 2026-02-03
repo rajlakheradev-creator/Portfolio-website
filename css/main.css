@@ -1,0 +1,15 @@
+/* main.css - Import all CSS modules */
+
+@import url('variables.css');
+@import url('reset.css');
+@import url('header.css');
+@import url('navigation.css');
+@import url('sections.css');
+@import url('home.css');
+@import url('about.css');
+@import url('certificates.css');
+@import url('skills.css');
+@import url('projects.css');
+@import url('contacts.css');  /* ✅ FIXED: Changed from 'contact.css' to 'contacts.css' */
+@import url('footer.css');
+@import url('responsive.css');

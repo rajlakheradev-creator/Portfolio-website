@@ -1,0 +1,42 @@
+/* Header Banner Styles */
+header#main-header {
+    background:url('../public/header.png');
+    background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+    min-height: 180px; 
+    display: flex;     
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+        position: relative;
+    overflow: hidden;
+}
+
+header#main-header::before { 
+        content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255,255,130,0.1) 0%, transparent 50%);
+    animation: pulse 4s ease-in-out infinite;
+ }
+
+@keyframes pulse { 
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+header#main-header h1 { 
+        font-family: 'Courier New', Courier, monospace;
+    font-size: 36px; 
+    font-weight: 900;
+    text-shadow: 2px 2px 4px #000000;
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+ }
