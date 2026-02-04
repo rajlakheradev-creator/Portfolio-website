@@ -317,3 +317,4 @@ if (contactForm) {
         });
     });
 });
+// End of script.js
