@@ -1,0 +1,22 @@
+Project Title: Landing Page & Professional Portfolio
+Overview
+This project is a high-performance personal portfolio and landing page website designed to showcase professional work, technical skills, and projects. It is built using a clean, modern tech stack and is fully deployed for live viewing.
+Live Demo: landing-page-portfolio-website.vercel.app
+Status: Active and maintained
+Key Features
+Responsive Design: Architected with modern CSS to ensure a seamless, professional appearance across all devices (mobile, tablet, and desktop).
+Interactive UI: Utilizes vanilla JavaScript to enhance user engagement through interactive elements and smooth functionality.
+PWA Ready: Includes a Web Manifest for Progressive Web App support, allowing for a mobile-friendly, app-like experience.
+Custom Branding: Integrated custom favicon assets and a structured directory for consistent visual identity.
+Project Structure
+The project follows a modular and lightweight structure:
+index.html – Core structure containing the landing page and portfolio sections.
+style.css – Comprehensive styling, layout, and responsive design system.
+script.js – Logic for interactive features and dynamic UI elements.
+site.webmanifest – Configuration for PWA capabilities.
+public/ – Centralized directory for images and static assets.
+favicon_io/ – Specialized directory for browser and mobile device icons.
+Technical Stats
+Created: December 4, 2025
+Visibility: Public
+Tech Stack: HTML5, CSS3, JavaScript (ES6+)
